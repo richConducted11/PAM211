@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pract 2</title>
+</head>
+<body>
+    <script>
+        const productos = [
+            {nombre: "Laptop", precio: "12000"},
+            {nombre: "Mouse", precio: "250"},
+            {nombre: "Teclado", precio: "750"},
+            {nombre: "Monitor", precio: "3000"}
+        ];
+        const nombres = productos.filter( producto => producto.precio > 1000 )
+            .map( producto => producto.nombre );
+        console.log(nombres);
+    </script>
+</body>
+</html>
