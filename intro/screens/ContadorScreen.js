@@ -55,7 +55,7 @@ container: {
         textDecorationLine:'underline',
     },
     botonesContainer:{
-        marginTop:20,
+        marginTop:25,
         flexDirection:'row',
         gap:25,
     },
