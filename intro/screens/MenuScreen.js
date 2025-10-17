@@ -7,8 +7,9 @@ import TextInputyAlert from './TextInputyAlert';
 import ImageBackgroundySplashScreen from './ImageBackgroundySplashScreen';
 import ScrollView from './ScrollView';
 import ActivityIndicator from './ActivityIndicator';
-import FlatlistySectionList from './FlatlistySectionList';
+import FlatList from './FlatlList';
 import Modal from './Modal';
+import SectionList from './SectionList';
 
 export default function MenuScreen() {
     const [screen, setScreen]= useState('menu');
@@ -28,10 +29,12 @@ export default function MenuScreen() {
             return <ScrollView></ScrollView>;
         case 'ActivityIndicator':
             return <ActivityIndicator></ActivityIndicator>;
-        case 'FlatlistySectionList':
-            return <FlatlistySectionList></FlatlistySectionList>;
+        case 'FlatList':
+            return <FlatList></FlatList>;
         case 'Modal':
             return <Modal></Modal>;
+        case 'SectionList':
+            return <SectionList></SectionList>
         case 'menu':
             default:
             return (
@@ -45,8 +48,9 @@ export default function MenuScreen() {
                 <Button onPress={()=>setScreen('ImageBackgroundySplashScreen')} title='Pract: Image Background & Splash Screen'></Button>
                 <Button onPress={()=>setScreen('ScrollView')} title='Pract: Scroll View'></Button>
                 <Button onPress={()=>setScreen('ActivityIndicator')} title='Pract: Activity Indicator'></Button>
-                <Button onPress={()=>setScreen('FlatlistySectionList')} title='Pract: Flat List y Section List'></Button>
+                <Button onPress={()=>setScreen('FlatList')} title='Pract: Flat List'></Button>
                 <Button onPress={()=>setScreen('Modal')} title='Pract: Modal'></Button>
+                <Button onPress={()=>setScreen('SectionList')} title='Pract: SectionList'></Button>
                 </View>
                 </View>
         )
