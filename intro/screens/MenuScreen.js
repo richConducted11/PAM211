@@ -1,6 +1,5 @@
 import { Text, StyleSheet, View, Button } from 'react-native'
 import React, { useState } from 'react'
-import BotonesScreen from './BotonesScreen';
 import ContadorScreen from './ContadorScreen';
 import ButtonsySwitch from './ButtonsySwitch';
 import TextInputyAlert from './TextInputyAlert';
@@ -17,8 +16,6 @@ export default function MenuScreen() {
     switch(screen){
         case 'contador':
             return <ContadorScreen></ContadorScreen>;
-        case 'botones':
-            return <BotonesScreen></BotonesScreen>;
         case 'Buttons&Switch':
             return <ButtonsySwitch></ButtonsySwitch>;
         case 'TextInputyAlert':
@@ -42,7 +39,6 @@ export default function MenuScreen() {
                 <Text style={styles.menu1}>Menú de Prácticas</Text>
                 <View style={styles.botonesContainer1}>
                 <Button onPress={()=>setScreen('contador')} title='Pract: Contador'></Button>
-                <Button onPress={()=>setScreen('botones')} title='Pract: Botones'></Button>
                 <Button onPress={()=>setScreen('Buttons&Switch')} title='Pract: Buttons & Switch'></Button>
                 <Button onPress={()=>setScreen('TextInputyAlert')} title='Pract: Text Input & Alert'></Button>
                 <Button onPress={()=>setScreen('ImageBackgroundySplashScreen')} title='Pract: Image Background & Splash Screen'></Button>
