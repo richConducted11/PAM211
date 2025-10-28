@@ -4,7 +4,7 @@ import ContadorScreen from './ContadorScreen';
 import ButtonsySwitch from './ButtonsySwitch';
 import TextInputyAlert from './TextInputyAlert';
 import ImageBackgroundySplashScreen from './ImageBackgroundySplashScreen';
-import ScrollView from './ScrollView';
+import ScrollViewScreen from './ScrollViewScreen';
 import ActivityIndicator from './ActivityIndicator';
 import FlatList from './FlatlList';
 import Modal from './Modal';
@@ -23,8 +23,8 @@ export default function MenuScreen() {
             return <TextInputyAlert></TextInputyAlert>;
         case 'ImageBackgroundySplashScreen':
             return <ImageBackgroundySplashScreen></ImageBackgroundySplashScreen>;
-        case 'ScrollView':
-            return <ScrollView></ScrollView>;
+        case 'ScrollViewScreen':
+            return <ScrollViewScreen></ScrollViewScreen>;
         case 'ActivityIndicator':
             return <ActivityIndicator></ActivityIndicator>;
         case 'FlatList':
@@ -45,7 +45,7 @@ export default function MenuScreen() {
                 <Button onPress={()=>setScreen('Buttons&Switch')} title='Pract: Buttons & Switch'></Button>
                 <Button onPress={()=>setScreen('TextInputyAlert')} title='Pract: Text Input & Alert'></Button>
                 <Button onPress={()=>setScreen('ImageBackgroundySplashScreen')} title='Pract: Image Background & Splash Screen'></Button>
-                <Button onPress={()=>setScreen('ScrollView')} title='Pract: Scroll View'></Button>
+                <Button onPress={()=>setScreen('ScrollViewScreen')} title='Pract: Scroll View'></Button>
                 <Button onPress={()=>setScreen('ActivityIndicator')} title='Pract: Activity Indicator'></Button>
                 <Button onPress={()=>setScreen('FlatList')} title='Pract: Flat List'></Button>
                 <Button onPress={()=>setScreen('Modal')} title='Pract: Modal'></Button>
