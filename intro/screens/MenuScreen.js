@@ -5,10 +5,9 @@ import ButtonsySwitch from './ButtonsySwitch';
 import TextInputyAlert from './TextInputyAlert';
 import ImageBackgroundySplashScreen from './ImageBackgroundySplashScreen';
 import ScrollViewScreen from './ScrollViewScreen';
-import ActivityIndicator from './ActivityIndicator';
-import FlatList from './FlatlList';
+import ActivityScreen from './ActivityScreen';
+import ListScreen from './ListScreen';
 import Modal from './Modal';
-import SectionList from './SectionList';
 import Repaso1 from './Repaso1';
 
 export default function MenuScreen() {
@@ -25,14 +24,12 @@ export default function MenuScreen() {
             return <ImageBackgroundySplashScreen></ImageBackgroundySplashScreen>;
         case 'ScrollViewScreen':
             return <ScrollViewScreen></ScrollViewScreen>;
-        case 'ActivityIndicator':
-            return <ActivityIndicator></ActivityIndicator>;
-        case 'FlatList':
-            return <FlatList></FlatList>;
+        case 'ActivityScreen':
+            return <ActivityScreen></ActivityScreen>;
+        case 'ListScreen':
+            return <ListScreen></ListScreen>;
         case 'Modal':
             return <Modal></Modal>;
-        case 'SectionList':
-            return <SectionList></SectionList>
         case 'Repaso1':
             return <Repaso1></Repaso1>
         case 'menu':
@@ -46,10 +43,9 @@ export default function MenuScreen() {
                 <Button onPress={()=>setScreen('TextInputyAlert')} title='Pract: Text Input & Alert'></Button>
                 <Button onPress={()=>setScreen('ImageBackgroundySplashScreen')} title='Pract: Image Background & Splash Screen'></Button>
                 <Button onPress={()=>setScreen('ScrollViewScreen')} title='Pract: Scroll View'></Button>
-                <Button onPress={()=>setScreen('ActivityIndicator')} title='Pract: Activity Indicator'></Button>
-                <Button onPress={()=>setScreen('FlatList')} title='Pract: Flat List'></Button>
+                <Button onPress={()=>setScreen('ActivityScreen')} title='Pract: Activity Indicator'></Button>
+                <Button onPress={()=>setScreen('ListScreen')} title='Pract: Flat List y Section List'></Button>
                 <Button onPress={()=>setScreen('Modal')} title='Pract: Modal'></Button>
-                <Button onPress={()=>setScreen('SectionList')} title='Pract: SectionList'></Button>
                 <Button onPress={()=>setScreen('Repaso1')} title='Repaso1'></Button>
                 </View>
                 </View>
