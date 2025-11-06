@@ -31,7 +31,7 @@ export default function MenuScreen() {
         case 'Modal':
             return <Modal></Modal>;
         case 'Repaso1':
-            return <Repaso1></Repaso1>
+            return <Repaso1></Repaso1>;
         case 'menu':
             default:
             return (
