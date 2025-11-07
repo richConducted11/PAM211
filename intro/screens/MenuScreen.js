@@ -9,6 +9,7 @@ import ActivityScreen from './ActivityScreen';
 import ListScreen from './ListScreen';
 import Modal from './Modal';
 import Repaso1 from './Repaso1';
+import MenuRestaurante from './MenuRestaurante';
 
 export default function MenuScreen() {
     const [screen, setScreen]= useState('menu');
@@ -32,6 +33,8 @@ export default function MenuScreen() {
             return <Modal></Modal>;
         case 'Repaso1':
             return <Repaso1></Repaso1>;
+        case 'MenuRestaurante':
+            return <MenuRestaurante></MenuRestaurante>
         case 'menu':
             default:
             return (
@@ -47,6 +50,7 @@ export default function MenuScreen() {
                 <Button onPress={()=>setScreen('ListScreen')} title='Pract: Flat List y Section List'></Button>
                 <Button onPress={()=>setScreen('Modal')} title='Pract: Modal'></Button>
                 <Button onPress={()=>setScreen('Repaso1')} title='Repaso1'></Button>
+                <Button onPress={()=>setScreen('MenuRestaurante')} title='MenuRestaurante'></Button>
                 </View>
                 </View>
         )
