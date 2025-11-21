@@ -1,14 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 
-export default function Settings() {
+export default function detalles() {
     return (
         <View style={styles.container}>
-            <View style={styles.iconRow}>
-                <Ionicons name="settings-outline" size={60} color="blue" />
-                <Text style={styles.title}>Configuraciones de usuario</Text>
-            </View>
+            <Text style={styles.title}>Detalles Usuario</Text>
+            <Text style={styles.subtitle}>Usando Navegacion Stack</Text>
         </View>
     );
 }
@@ -21,15 +18,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 20,
     },
-    iconRow: {
-        alignItems: 'center',
-        flexDirection: 'column',
-    },
     title: {
         fontSize: 22,
         fontWeight: 'bold',
-        marginTop: 20,
-        textAlign: 'center',
+        marginBottom: 10,
+    },
+    subtitle: {
+        fontSize: 18,
         color: 'blue',
     },
 });
