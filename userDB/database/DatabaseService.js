@@ -23,7 +23,7 @@ class DatabaseService {
         }
     }
 
-    // Función para obtener usuarios (SELECT)
+    // SELECT
     async getAll() {
         if (Platform.OS === 'web') {
             const data = localStorage.getItem(this.storageKey);
@@ -33,7 +33,7 @@ class DatabaseService {
         }
     }
 
-    // Función para agregar usuario (INSERT)
+    // INSERT
     async add(nombre) {
         if (Platform.OS === 'web') {
             const usuarios = await this.getAll();
@@ -55,6 +55,44 @@ class DatabaseService {
                 nombre,
                 fecha_creacion: new Date().toISOString()
             };
+        }
+    }
+
+    // UPDATE
+    async update(id, nombre) {
+        if (Platform.OS === 'web') {
+            let usuarios = await this.getAll();
+            // Buscar y actualizar en el array
+            usuarios = usuarios.map(u => 
+                u.id === id ? { ...u, nombre: nombre } : u
+            );
+            localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+            return { id, nombre };
+        } else {
+            // Actualizar en SQLite
+            await this.db.runAsync(
+                'UPDATE usuarios SET nombre = ? WHERE id = ?',
+                [nombre, id]
+            );
+            return { id, nombre };
+        }
+    }
+
+    // DELETE
+    async delete(id) {
+        if (Platform.OS === 'web') {
+            let usuarios = await this.getAll();
+            // Filtrar para quitar el usuario eliminado
+            usuarios = usuarios.filter(u => u.id !== id);
+            localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+            return true;
+        } else {
+            // Borrar de SQLite
+            await this.db.runAsync(
+                'DELETE FROM usuarios WHERE id = ?',
+                [id]
+            );
+            return true;
         }
     }
 }
